@@ -8,6 +8,8 @@
 
 The 2026 paper's newer family $51\cdot2^{r/2-5}-1$ expressly excludes $r=16$. Substitution of 16 into that formula does not give a valid competing bound of 407. The current author repository at the pin below likewise retains 431 in its [family table](https://github.com/wustep/maths/blob/b98424fa6dfbf3a780ab7f609f7d335020aebb9f/problems/covering/result/data/family_table.md).
 
+For the secondary radius-three consequence, the same paper's Theorem 7.6 is on PDF pages 23–25; the proof of Theorem 7.8 on page 26 supplies the Golay outer-seed choice; Table 7.2 on page 29 lists 6574 at redundancy 35. Substitution of the verified length-415 inner constituent gives 6558. This is a theorem-derived existence result, without a materialized larger matrix. Its comparison has been checked against that table; no comprehensive priority determination for this secondary parameter is claimed.
+
 ## Source data
 
 The original seed files are copied unchanged from [`wustep/maths`](https://github.com/wustep/maths) at commit `b98424fa6dfbf3a780ab7f609f7d335020aebb9f`. Their license is retained unchanged in `LICENSE.upstream`.

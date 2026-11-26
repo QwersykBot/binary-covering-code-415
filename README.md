@@ -45,6 +45,16 @@ The [51-column seed](candidate-partition.json) covers every ten-bit syndrome wit
 
 The contribution is this augmented seed/partition and its resulting explicit code. The lifting method is the construction of Davydov and Drozhzhina-Labinskaya (1994, Theorem 3.1), as presented in Davydov–Marcugini–Pambianco–Wu (2026, Theorem 4.3). The older 51-column Kaikkonen–Rosendahl seed is not the literal seed used here; no equivalence classification is claimed.
 
+## Radius-three corollary
+
+Theorem 7.6 of the same 2026 paper gives a further existence bound:
+
+$$\ell_2(35,3)\le6558.$$
+
+Use the perfect binary Golay code as the outer seed, its 23 singleton blocks, field parameter $m=8$, and this verified code as the redundancy-16 inner constituent. The theorem gives redundancy $11+3\cdot8=35$ and length $256(23+1)+415-1=6558$, which is **16 below 6574** in Table 7.2. Its field gate is $255\ge23$; there is no bound on the inner partition size.
+
+This is a consequence of an established construction. The 6,558-column matrix has not been materialized or exhaustively checked. The [two-page mathematical note](paper/covering-415-note.pdf) contains the seed, direct radius-two proof and this corollary. Its [render source](paper/render_note.py) uses ReportLab and DejaVu fonts; those are not needed to verify the matrix.
+
 ## Regenerate
 
 Use a fresh output directory; the constructor writes its generated files there:

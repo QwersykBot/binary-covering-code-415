@@ -82,3 +82,15 @@ $$ 1+415+\binom{415}{2}=86,321 $$
 error vectors. The receipt also gives the dependent triple at one-based columns 41, 145 and 161, whose values are 32, 341 and 373. Syndrome 33792 is the sum of columns 1 and 2 but is neither zero nor any single column. These independently certify the exact distance and radius on the materialized data.
 
 The supplied constructor reproduces the binary and decimal matrix files byte for byte. This finite certificate establishes an upper bound; it does not establish that 415 is minimal.
+
+## 6. Consequence at redundancy 35 and radius 3
+
+Theorem 7.6 of [Davydov–Marcugini–Pambianco–Wu (2026)](https://arxiv.org/html/2609.16078v2) takes an outer radius-three code of length $n_0$ and redundancy $r_0$, a $(3,0)$-partition into $p$ blocks, and an inner radius-two code of redundancy $2m$ and length $n_{2m}$. For $m\ge2$ and $2^m-1\ge p$, it gives
+
+$$r=r_0+3m,\qquad n=2^m(n_0+1)+n_{2m}-1.$$
+
+Take the ordinary perfect binary Golay $[23,12,7]$ code as the outer code, with its 23 singleton blocks. This is the same outer seed used in the paper's proof of Theorem 7.8. Put $m=8$ and use the verified code above as the inner code. The inner code's singleton partition is sufficient; no restriction on its partition size is imposed by this theorem. Then $255\ge23$, $r=35$, and $n=6558$, so
+
+$$\ell_2(35,3)\le6558.$$
+
+Table 7.2 lists 6574 at redundancy 35. This is another 16-column improvement relative to that table. The larger matrix has not been generated here, and no exhaustive $2^{35}$-syndrome check is claimed. The result follows from the stated theorem and the verified constituent; no stronger partition parameter or asymptotic conclusion is needed.
