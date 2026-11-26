@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "matrix_sha256": "293a251fcb06faacf4e512b4c15aa1ff2f25577b3ea200e0c490ed317d2d71ab",
+  "matrix_bytes": 6656,
+  "row_count": 16,
+  "length": 415,
+  "gf2_row_rank": 16,
+  "dimension": 399,
+  "nonzero_distinct_columns": 415,
+  "minimum_distance": 3,
+  "covering_radius": 2,
+  "syndromes_covered": 65536,
+  "error_patterns_enumerated": 86321,
+  "syndrome_representation_multiplicities": {
+    "1": 56506,
+    "2": 7777,
+    "3": 424,
+    "4": 7,
+    "8": 7,
+    "9": 455,
+    "10": 30,
+    "12": 7,
+    "16": 7,
+    "18": 1,
+    "25": 191,
+    "26": 64,
+    "27": 24,
+    "32": 21,
+    "33": 1,
+    "36": 14
+  },
+  "dependent_triple": {
+    "column_indices_1based": [
+      41,
+      145,
+      161
+    ],
+    "column_values_bit0_first_row": [
+      32,
+      341,
+      373
+    ]
+  },
+  "syndrome_requiring_two_columns": {
+    "value_bit0_first_row": 33792,
+    "column_indices_1based": [
+      1,
+      2
+    ]
+  },
+  "method": "Binary rows only; GF(2) row elimination; all empty, singleton and unordered distinct-pair column sums",
+  "scope": "Finite matrix certificate. No optimality, priority or external acceptance claim."
+}
