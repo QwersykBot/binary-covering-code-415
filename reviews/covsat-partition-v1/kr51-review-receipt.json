@@ -1,0 +1,255 @@
+{
+  "schema": "kr51-constructive-review-receipt-v1",
+  "status": "PASS: constructive checks only",
+  "utc_completed": "2026-11-26T22:34:32.337833+00:00",
+  "python": "3.12.14",
+  "elapsed_seconds": 0.005240847000095528,
+  "script_sha256": "71ba6cca13c453fd52654ed363672c28858c24618f22e1b736561c3a4a7afa6f",
+  "inputs_sha256": "f0d4fa85c65b40b0df1ad176b31ca8b22e726b8d52b610c9eb1001c858517979",
+  "source_pdf_sha256": "dd2dd5521833f19a531a998ec34e262d8280201138ed3f49c11ea8b3d2d7a275",
+  "sources": {
+    "primary_kr51": {
+      "authors": [
+        "Alexander A. Davydov",
+        "Stefano Marcugini",
+        "Fernanda Pambianco"
+      ],
+      "title": "New upper bounds for binary linear covering codes",
+      "version": "arXiv:2511.02542v1",
+      "version_date": "2025-11-04",
+      "url": "https://arxiv.org/html/2511.02542v1",
+      "matrix_locator": "Theorem 4.3, equation (4.9): H_KR = [I_10 | M_KR], 41 hexadecimal columns",
+      "encoding_locator": "Opening of Theorem 5.2: row 1 is the high bit; h_1 = (10 0000 0000)^T, h_10 = (00 0000 0001)^T, h_11 = 1B6, h_51 = D4",
+      "partition_locator": "Theorem 5.2(i), equation (5.3): eleven-block partition Psi_KR",
+      "triple_locator": "Theorem 5.2(ii): columns in positions 5, 27, 29 sum to zero and meet three blocks of Psi_KR",
+      "inspection": "Independently read the immutable official v1 HTML. The input below is a transcription of its hexadecimal list and position blocks; no author verification code was imported.",
+      "local_original_pdf_sha256": null
+    },
+    "ksl_reviewed_pdf": {
+      "author": "Korea Superintelligence Labs",
+      "title": "Exact (2,0)-partition numbers for two binary covering codes of covering radius two",
+      "url": "https://lean.up.railway.app/papers/covsat-partition-v1.pdf",
+      "version": "covsat-partition-v1.pdf, bytes archived for this review",
+      "bytes": 152215,
+      "sha256": "dd2dd5521833f19a531a998ec34e262d8280201138ed3f49c11ea8b3d2d7a275",
+      "matrix_locator": "Printed/PDF page 5, section 3, preceding Proposition 3.3",
+      "partition_locator": "Printed/PDF page 5, Theorem 4.2, constructive ten-block partition",
+      "control_locator": "Printed/PDF page 9, Remark 7.2: omitted reversal preserves ordinary coverage but makes the indexed triple 48 and leaves 27 syndromes unsplit under Psi_KR",
+      "inspection": "PDF hash checked; page 5 rendered and visually inspected. Decimal list is used only as a comparison with the independently reconstructed primary matrix. The SAT/LRAT lower bound was not reviewed or replayed."
+    }
+  },
+  "constructed_columns": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128,
+    256,
+    512,
+    438,
+    806,
+    206,
+    902,
+    446,
+    956,
+    474,
+    10,
+    240,
+    421,
+    977,
+    771,
+    519,
+    667,
+    738,
+    790,
+    185,
+    317,
+    169,
+    424,
+    960,
+    520,
+    939,
+    65,
+    176,
+    595,
+    709,
+    739,
+    687,
+    594,
+    943,
+    948,
+    223,
+    285,
+    241,
+    724,
+    459,
+    682,
+    413,
+    571,
+    172
+  ],
+  "matches_visually_checked_ksl_decimal_list": true,
+  "ordinary_coverage": {
+    "rank": 10,
+    "zero_and_single_syndromes": 52,
+    "syndromes_requiring_a_pair": 972,
+    "covered_syndromes": 1024,
+    "uncovered_syndromes": [],
+    "radius_one_failure_witness": 3,
+    "covering_radius_exactly_two": true
+  },
+  "original_eleven_block_partition": {
+    "blocks": 11,
+    "block_sizes": [
+      3,
+      2,
+      7,
+      6,
+      3,
+      7,
+      4,
+      6,
+      4,
+      6,
+      3
+    ],
+    "positions_partitioned_once": 51,
+    "pair_syndromes_checked": 972,
+    "pair_syndromes_with_cross_block_witness": 972,
+    "missing_syndromes": [],
+    "is_2_0_partition": true
+  },
+  "original_guard_triple": {
+    "positions": [
+      5,
+      27,
+      29
+    ],
+    "column_values": [
+      16,
+      185,
+      169
+    ],
+    "xor": 0,
+    "block_numbers": [
+      1,
+      2,
+      3
+    ],
+    "three_distinct_blocks": true
+  },
+  "minimum_distance_exactly_three": "Distinct nonzero columns exclude weights 1 and 2; the verified three distinct positions sum to zero.",
+  "new_ten_block_partition": {
+    "blocks": 10,
+    "block_sizes": [
+      10,
+      10,
+      10,
+      9,
+      7,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "positions_partitioned_once": 51,
+    "pair_syndromes_checked": 972,
+    "pair_syndromes_with_cross_block_witness": 972,
+    "missing_syndromes": [],
+    "is_2_0_partition": true
+  },
+  "wrong_reversal_control": {
+    "ordinary_coverage": {
+      "rank": 10,
+      "zero_and_single_syndromes": 52,
+      "syndromes_requiring_a_pair": 972,
+      "covered_syndromes": 1024,
+      "uncovered_syndromes": [],
+      "radius_one_failure_witness": 3,
+      "covering_radius_exactly_two": true
+    },
+    "original_eleven_block_partition": {
+      "blocks": 11,
+      "block_sizes": [
+        3,
+        2,
+        7,
+        6,
+        3,
+        7,
+        4,
+        6,
+        4,
+        6,
+        3
+      ],
+      "positions_partitioned_once": 51,
+      "pair_syndromes_checked": 972,
+      "pair_syndromes_with_cross_block_witness": 945,
+      "missing_syndromes": [
+        10,
+        61,
+        160,
+        180,
+        208,
+        275,
+        284,
+        322,
+        328,
+        337,
+        342,
+        476,
+        515,
+        521,
+        573,
+        577,
+        610,
+        626,
+        641,
+        695,
+        706,
+        759,
+        851,
+        950,
+        977,
+        1014,
+        1020
+      ],
+      "is_2_0_partition": false
+    },
+    "indexed_triple": {
+      "positions": [
+        5,
+        27,
+        29
+      ],
+      "column_values": [
+        16,
+        628,
+        596
+      ],
+      "xor": 48,
+      "block_numbers": [
+        1,
+        2,
+        3
+      ],
+      "three_distinct_blocks": true
+    },
+    "column_set_is_full_coordinate_reversal": true
+  },
+  "established_scope": [
+    "The primary matrix has rank 10 and defines a binary [51,41] code of covering radius exactly 2 and minimum distance 3.",
+    "The primary eleven-block and KSL ten-block position partitions are (2,0)-partitions of this exact ordered matrix.",
+    "The constructive upper bound p_min(H_KR) <= 10 and Remark 7.2's stated reversal control are reproduced."
+  ],
+  "not_checked": [
+    "No SAT solving, LRAT replay, Lean checking, or verification of the lower bound p_min >= 10.",
+    "No conclusion about a different 51-column seed or the published length-415 certificate.",
+    "No submission, external contact, or claim of human expert review."
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "schema": "kr51-constructive-review-inputs-v1",
+  "review_date": "2026-11-26",
+  "sources": {
+    "primary_kr51": {
+      "authors": ["Alexander A. Davydov", "Stefano Marcugini", "Fernanda Pambianco"],
+      "title": "New upper bounds for binary linear covering codes",
+      "version": "arXiv:2511.02542v1",
+      "version_date": "2025-11-04",
+      "url": "https://arxiv.org/html/2511.02542v1",
+      "matrix_locator": "Theorem 4.3, equation (4.9): H_KR = [I_10 | M_KR], 41 hexadecimal columns",
+      "encoding_locator": "Opening of Theorem 5.2: row 1 is the high bit; h_1 = (10 0000 0000)^T, h_10 = (00 0000 0001)^T, h_11 = 1B6, h_51 = D4",
+      "partition_locator": "Theorem 5.2(i), equation (5.3): eleven-block partition Psi_KR",
+      "triple_locator": "Theorem 5.2(ii): columns in positions 5, 27, 29 sum to zero and meet three blocks of Psi_KR",
+      "inspection": "Independently read the immutable official v1 HTML. The input below is a transcription of its hexadecimal list and position blocks; no author verification code was imported.",
+      "local_original_pdf_sha256": null
+    },
+    "ksl_reviewed_pdf": {
+      "author": "Korea Superintelligence Labs",
+      "title": "Exact (2,0)-partition numbers for two binary covering codes of covering radius two",
+      "url": "https://lean.up.railway.app/papers/covsat-partition-v1.pdf",
+      "version": "covsat-partition-v1.pdf, bytes archived for this review",
+      "bytes": 152215,
+      "sha256": "dd2dd5521833f19a531a998ec34e262d8280201138ed3f49c11ea8b3d2d7a275",
+      "matrix_locator": "Printed/PDF page 5, section 3, preceding Proposition 3.3",
+      "partition_locator": "Printed/PDF page 5, Theorem 4.2, constructive ten-block partition",
+      "control_locator": "Printed/PDF page 9, Remark 7.2: omitted reversal preserves ordinary coverage but makes the indexed triple 48 and leaves 27 syndromes unsplit under Psi_KR",
+      "inspection": "PDF hash checked; page 5 rendered and visually inspected. Decimal list is used only as a comparison with the independently reconstructed primary matrix. The SAT/LRAT lower bound was not reviewed or replayed."
+    }
+  },
+  "row_count": 10,
+  "coordinate_convention": "LSB-first: bit 0 is row 1. Reverse exactly ten bits of each primary hexadecimal column; prepend columns 1,2,4,...,512 for I_10. Do not reorder columns.",
+  "partition_convention": "Every block contains one-based column POSITIONS, not column values. Zero and single-column syndromes are already represented; every other syndrome must have a two-column representation crossing distinct blocks.",
+  "primary_hex_columns": [
+    "1B6", "193", "1CC", "187", "1F6", "F7", "16E", "140", "3C", "296", "22F", "303", "381", "365",
+    "11D", "1A3", "274", "2F2", "254", "56", "F", "41", "357", "208", "34", "329", "28D", "31D", "3D5", "129", "3D7",
+    "B7", "3EC", "2E2", "23C", "AD", "34E", "155", "2E6", "371", "D4"
+  ],
+  "ksl_printed_lsb_columns": [
+    1, 2, 4, 8, 16, 32, 64, 128, 256, 512,
+    438, 806, 206, 902, 446, 956, 474, 10, 240, 421,
+    977, 771, 519, 667, 738, 790, 185, 317, 169, 424,
+    960, 520, 939, 65, 176, 595, 709, 739, 687, 594,
+    943, 948, 223, 285, 241, 724, 459, 682, 413, 571, 172
+  ],
+  "original_eleven_blocks": [
+    [5, 13, 43],
+    [20, 27],
+    [3, 29, 33, 39, 41, 48, 51],
+    [1, 7, 19, 25, 34, 45],
+    [2, 4, 18],
+    [6, 8, 12, 26, 28, 35, 44],
+    [9, 22, 23, 30],
+    [10, 11, 15, 16, 32, 42],
+    [14, 24, 49, 50],
+    [17, 21, 31, 37, 46, 47],
+    [36, 38, 40]
+  ],
+  "new_ten_blocks": [
+    [1, 3, 9, 22, 23, 27, 29, 30, 33, 39],
+    [2, 4, 10, 11, 15, 16, 18, 20, 32, 44],
+    [5, 6, 8, 12, 14, 24, 26, 28, 41, 49],
+    [7, 19, 25, 34, 35, 36, 38, 40, 48],
+    [13, 17, 21, 31, 37, 43, 46],
+    [42], [45], [47], [50], [51]
+  ],
+  "guard_positions": [5, 27, 29],
+  "source_expected_reversal_control": {
+    "correct_guard_xor": 0,
+    "unreversed_guard_xor": 48,
+    "unreversed_original_partition_missing_count": 27
+  },
+  "scope_exclusions": [
+    "No SAT solving, LRAT replay, Lean checking, or verification of the lower bound p_min >= 10.",
+    "No conclusion about a different 51-column seed or the published length-415 certificate.",
+    "No submission, external contact, or claim of human expert review."
+  ]
+}

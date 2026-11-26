@@ -78,6 +78,10 @@ The original search history is preserved separately in the [release archive](htt
 
 Corrections or a reference to an earlier construction can be reported through this repository's issues. No response or endorsement by the cited authors is implied.
 
+## Related reproducibility work
+
+The [scoped review of the fixed-seed partition paper](reviews/covsat-partition-v1/README.md) independently reproduces its ten-block Kaikkonen–Rosendahl construction and bit-order control, and examines its printed logical reduction. It does not replay the formal lower-bound certificates, establish the paper's claimed equalities, or provide outside validation of this repository's result. The report includes its source pins, checker, receipt and related-work disclosure; it has not been submitted to a journal.
+
 ## License
 
 New code and documentation, including the new work in the frozen release archive, are offered under the [MIT license](LICENSE). Stephen Wu's source data and derived seed material retain the original [MIT notice](LICENSE.upstream). See [PROVENANCE.md](PROVENANCE.md) for their exact origin.
